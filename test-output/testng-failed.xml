@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.atmecs.assess.yatra.testscripts.flightbooking">
+      <class name="com.atmecs.assess.yatra.testscripts.Monuments">
         <methods>
-          <include name="runBooking"/>
+          <include name="runMonument"/>
           <include name="declaration"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.atmecs.assess.yatra.testscripts.flightbooking -->
+      </class> <!-- com.atmecs.assess.yatra.testscripts.Monuments -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

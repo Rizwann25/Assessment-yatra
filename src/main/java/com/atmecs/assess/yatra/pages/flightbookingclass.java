@@ -3,6 +3,7 @@ package com.atmecs.assess.yatra.pages;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.atmecs.assess.yatra.constants.Constants;
 import com.atmecs.assess.yatra.helper.HelperClass;
@@ -15,77 +16,55 @@ public class flightbookingclass extends SetUp {
 	Properties Data_path;
 	
 	
-	//WebDriverWait wait = new WebDriverWait(driver, 60);
+	    //WebDriverWait wait = new WebDriverWait(driver, 60);
     	public void bookTickets() throws InterruptedException, Exception {
 		Location_path = PropertyReader.readProperty(Constants.LOCATORS_PATH);
 		Data_path = PropertyReader.readProperty(Constants.DATA_FILE); 
-		Thread.sleep(7000);
+		
 		HelperClass.closeAdWindow(driver, Location_path.getProperty("yatra_iframe_ad"), 
-				Location_path.getProperty("yatra_iframe_close_window"));
-		
-		
-		  HelperClass.elementClick(driver,
-		  Location_path.getProperty("yatra_iframe_ad"));
-		  HelperClass.elementClick(driver,
-		  Location_path.getProperty("yatra_iframe_close_window"));
-		 
-		 //driver.switchTo().alert().accept();
-		
+				               Location_path.getProperty("yatra_iframe_close_window"));
+			
 		 //FLIGHT BOOKING
 		 HelperClass.elementClick(driver, Location_path.getProperty("xpathFlights"));
-		 Thread.sleep(1000);
+		 
 		
 		 //TRIP TYPE
-		 driver.manage().timeouts().implicitlyWait(0,TimeUnit.SECONDS);
+		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		 HelperClass.elementClick(driver, Location_path.getProperty("roundTrip_Id"));
-		 Thread.sleep(1000);
+		 
 
 		  //TRIP DETAILS
-		
-		  HelperClass.elementClick(driver,
-		  Location_path.getProperty("departFromXpath")); Thread.sleep(1000);
-		  HelperClass.enterElement(driver,
-		  Location_path.getProperty("departFromXpath"),
-		  Data_path.getProperty("depart"));
+		  HelperClass.elementClick(driver, Location_path.getProperty("loc_departure_city")); 
+		  HelperClass.enterElement(driver, Location_path.getProperty("loc_departure_city"), Data_path.getProperty("depart"));
 		  
-		  HelperClass.elementClick(driver, Location_path.getProperty("goingToXpath"));
-		  Thread.sleep(1000); HelperClass.enterElement(driver,
-		  Location_path.getProperty("goingToXpath"),
-		  Data_path.getProperty("arrivals")); Thread.sleep(3000);
-		 
-		
-		
-		  //BOOKING DETAILS 
-		
-		  //HelperClass.elementClick(driver, Location_path.getProperty("departureDate"));
-		  driver.findElement(By.id("departureDate"));
-		  HelperClass.enterElement(driver, Location_path.getProperty("goingToXpath"), Data_path.getProperty("xpathDepartureDate"));
+		  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		  HelperClass.elementClick(driver, Location_path.getProperty("loc_arrival_city"));
 		  
-		  //HelperClass.elementClick(driver, Location_path.getProperty("returnDate"));
-		  driver.findElement(By.id("departureDate"));
-		  HelperClass.enterElement(driver, Location_path.getProperty("goingToXpath"), Data_path.getProperty("xpathReturnDate")); 
-		  Thread.sleep(5000);
-		 
-		  //driver.findElement(By.id("departureDate")).click();
+		  HelperClass.enterElement(driver, Location_path.getProperty("loc_arrival_city"), Data_path.getProperty("arrivals"));
+		  HelperClass.elementClick(driver, Location_path.getProperty("loc_departure_date_field"));
 		  
-		  HelperClass.selectElementById(driver, Location_path.getProperty("xpathDepartureDate"));
 		  
-		  //driver.findElement(By.id("returnDate")).click();
+		  //BOOKING DATE DETAILS 
+		  HelperClass.elementClick(driver, Location_path.getProperty("loc_departure_date_field"));
+		  HelperClass.elementClick(driver, Location_path.getProperty("loc_departure_date"));
 		  
-		  HelperClass.selectElementById(driver, Location_path.getProperty("xpathReturnDate"));
+		  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		  HelperClass.elementClick(driver, Location_path.getProperty("loc_arrival_date_field"));
+		  HelperClass.elementClick(driver, Location_path.getProperty("loc_arrival_date")); 
 		  
+		 		  
 		  // Flight CLASS TYPE 
-		  HelperClass.elementClick(driver, Location_path.getProperty("xpathFlightClass"));
+		  HelperClass.elementClick(driver, Location_path.getProperty("flightClass"));
+		  
 		  HelperClass.elementClick(driver, Location_path.getProperty("economyXpath"));
+		  
 		  
 		  // SEARCH OPERATION 
 		  HelperClass.elementClick(driver, Location_path.getProperty("searchButtonXpath"));
-		  HelperClass.selectElementById(driver, Location_path.getProperty("confirmationTab"));
-		  
+		  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		  // BOOKING CONFIRMATION 
 		  HelperClass.elementClick(driver, Location_path.getProperty("bookNowXpath"));
 		 
-
 		driver.close();
 
 	}

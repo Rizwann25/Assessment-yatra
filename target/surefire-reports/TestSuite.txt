@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 54.928 s <<< FAILURE! - in TestSuite
+runMonument(com.atmecs.assess.yatra.testscripts.Monuments)  Time elapsed: 3.793 s  <<< FAILURE!
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at com.atmecs.assess.yatra.testscripts.Monuments.runMonument(Monuments.java:15)
+

@@ -24,7 +24,10 @@ import org.openqa.selenium.support.ui.Select;
 			 driver.switchTo().parentFrame();
 			}
 
-	
+		public static void enterElement(WebDriver driver, String xpath)
+		{
+			driver.findElement(By.xpath(xpath));	
+		}
 		//this method is for click on page element
 		public static void elementClick(WebDriver driver,String xpath)
 		{

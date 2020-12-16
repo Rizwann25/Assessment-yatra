@@ -16,27 +16,16 @@ import com.atmecs.assess.yatra.setup.SetUp;
 					Location_path = PropertyReader.readProperty(Constants.LOCATORS_PATH);
 					Data_path = PropertyReader.readProperty(Constants.DATA_FILE);
 					driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+					
+				HelperClass.closeAdWindow(driver, Location_path.getProperty("yatra_iframe_ad"), 
+				               Location_path.getProperty("yatra_iframe_close_window"));
 				
-		
-		/*
-		 * boolean topMonuments = HelperClass.checkIfDisplayed(driver,
-		 * Location_path.get("topMonumentsXpath")); Assert.assertEquals(true,
-		 * topMonuments); if (topMonuments == true) {
-		 * Reporter.log("Top Monuments Section has been displayed"); }
-		 * driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS); boolean
-		 * qutubMinarstatus = HelperClass.checkIfDisplayed(driver,
-		 * Location_path.get("qutubMinarXpath")); Assert.asserEquals(true,
-		 * qutubMinarstatus); if(qutubMinarstatus == true) {
-		 * Reporter.Log("qutub minar has been Displayed"); } boolean tombStatus =
-		 * HelperClass.checkIfDisplayed(driver, Location_path.get("humayunTombXpath"));
-		 * Assert.asserEquals(true, tombStatus); if(tombStatus == true) {
-		 * Reporter.Log("Humayuns Tomb has been Displayed"); }
-		 */
 		 
 				//Monuments Search
 				HelperClass.elementClick(driver, Location_path.getProperty("moreLink"));
 			    HelperClass.elementClick(driver, Location_path.getProperty("monumentsXpath"));
-				HelperClass.elementClick(driver, Location_path.getProperty("topMonumentsXpath"));
+			    Thread.sleep(2000);
+				HelperClass.elementClick(driver, Location_path.getProperty("selectDestination"));
 				HelperClass.elementSendKeys(driver, Location_path.getProperty("topMonumentsXpath"), Data_path.getProperty("arrival"));
 					
 				//2 Monuments displayed
