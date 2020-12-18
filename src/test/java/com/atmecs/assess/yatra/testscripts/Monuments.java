@@ -9,7 +9,7 @@ import com.atmecs.assess.yatra.setup.SetUp;
 		public class Monuments extends SetUp{
 		    
 			@Test
-			public void runMonument() throws InterruptedException
+			public void runMonument() throws Exception
 			{
 				MonumentsClass run=new MonumentsClass();
 				run.SearchMonuments();
@@ -21,4 +21,5 @@ import com.atmecs.assess.yatra.setup.SetUp;
 			return driver.findElement(By.xpath(xpath)).isDisplayed();
 
 			}
-}
+		
+		}

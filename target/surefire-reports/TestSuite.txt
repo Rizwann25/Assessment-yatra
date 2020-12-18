@@ -1,8 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 54.928 s <<< FAILURE! - in TestSuite
-runMonument(com.atmecs.assess.yatra.testscripts.Monuments)  Time elapsed: 3.793 s  <<< FAILURE!
-java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-	at com.atmecs.assess.yatra.testscripts.Monuments.runMonument(Monuments.java:15)
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 34.702 s <<< FAILURE! - in TestSuite
+runBooking(com.atmecs.assess.yatra.testscripts.FlightBooking)  Time elapsed: 3.571 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <input data-role="none" readonly="readonly" type="text" autocomplete="false" name="flight_origin_date" placeholder=" " id="BE_flight_origin_date" class="custom-date-input BE_flight_origin_date"> is not clickable at point (165, 259). Other element would receive the click: <p class="ac_airportname">...</p>
+  (Session info: chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ATMECSINLT-407', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MOHAMM~1.RIZ\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55659}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 01c24c5063b677b7241c499ac65be19b
+	at com.atmecs.assess.yatra.testscripts.FlightBooking.runBooking(FlightBooking.java:13)
 

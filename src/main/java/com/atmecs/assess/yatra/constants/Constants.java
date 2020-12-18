@@ -9,6 +9,7 @@ public class Constants {
 		public static final String CHROME_PATH = BASE_PATH + "/driver/chromedriver.exe";
 		public static final String GECKO_PATH=BASE_PATH+"/driver/geckodriver.exe";
 		public static final String TEST_DATA = BASE_PATH + "/xlsxFile/logindetails.xlsx";
+        public static final String VALIDATION_PATH = RESOURCE_PATH + "/validation.properties";
 		
 }
 

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.atmecs.assess.yatra.testscripts.flightbooking"/>
+      <class name="com.atmecs.assess.yatra.testscripts.FlightBooking"/>
       <class name="com.atmecs.assess.yatra.testscripts.Monuments"/>
     </classes>
   </test> <!-- Test -->

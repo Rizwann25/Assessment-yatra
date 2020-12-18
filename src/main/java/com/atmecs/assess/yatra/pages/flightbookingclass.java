@@ -2,25 +2,26 @@ package com.atmecs.assess.yatra.pages;
 
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
+import org.testng.Assert;
+
 import com.atmecs.assess.yatra.constants.Constants;
 import com.atmecs.assess.yatra.helper.HelperClass;
 import com.atmecs.assess.yatra.reader.PropertyReader;
 import com.atmecs.assess.yatra.setup.SetUp;
 
-public class flightbookingclass extends SetUp {
+public class FlightBookingClass extends SetUp {
 
 	Properties Location_path;
 	Properties Data_path;
+	Properties validate_path;
 	
-	
-	    //WebDriverWait wait = new WebDriverWait(driver, 60);
     	public void bookTickets() throws InterruptedException, Exception {
 		Location_path = PropertyReader.readProperty(Constants.LOCATORS_PATH);
-		Data_path = PropertyReader.readProperty(Constants.DATA_FILE); 
+		Data_path = PropertyReader.readProperty(Constants.DATA_FILE);
+		validate_path= PropertyReader.readProperty(Constants.VALIDATION_PATH);
 		
+		//POPUP CLOSE
 		HelperClass.closeAdWindow(driver, Location_path.getProperty("yatra_iframe_ad"), 
 				               Location_path.getProperty("yatra_iframe_close_window"));
 			
@@ -62,10 +63,27 @@ public class flightbookingclass extends SetUp {
 		  // SEARCH OPERATION 
 		  HelperClass.elementClick(driver, Location_path.getProperty("searchButtonXpath"));
 		  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		  
+		  //Validation
+		  HelperClass.elementClick(driver, Location_path.getProperty("flightDetails"));
+		  String expectedFlighName = validate_path.getProperty("flightName");
+		  String actualFlightName = HelperClass.getText(driver, Location_path.getProperty("airBus"));
+		  Assert.assertEquals(actualFlightName, expectedFlighName);
+		  
+		  HelperClass.elementClick(driver, Location_path.getProperty("fareSummary"));
+		  
+		  HelperClass.elementClick(driver, Location_path.getProperty("totalFareToBook"));
+		  
+		 
+		  
+		  Thread.sleep(2000);
 		  // BOOKING CONFIRMATION 
 		  HelperClass.elementClick(driver, Location_path.getProperty("bookNowXpath"));
-		 
-		driver.close();
-
+		  
+		  Thread.sleep(2000);
+		  //Validate Total Fare
+		  HelperClass.elementClick(driver, Location_path.getProperty("viewFareRules"));
+		  
+          Thread.sleep(2000);
 	}
 }

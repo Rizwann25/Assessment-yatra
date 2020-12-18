@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 	public class HelperClass {
 		
 		WebDriver driver;
-
+		
 		public HelperClass(WebDriver driver) {
 			this.driver = driver;
 		}
@@ -50,6 +50,11 @@ import org.openqa.selenium.support.ui.Select;
 		{
 			driver.findElement(By.id(key)).click();
 		}
+		public static String getText(WebDriver driver, String xpath)
+		{
+			String text = driver.findElement(By.xpath(xpath)).getText();
+			return text;
+		}
 		
 		public static void selectFromDropDown(WebDriver driver,String xpath,String value)
 		{
@@ -64,5 +69,5 @@ import org.openqa.selenium.support.ui.Select;
 		 element. sendKeys(Keys.ARROW_DOWN);
 		 element. sendKeys(Keys.ENTER);
 	  }
-
+	 
 }

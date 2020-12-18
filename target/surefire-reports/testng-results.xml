@@ -2,40 +2,49 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="53708" started-at="2020-12-16T17:42:00 IST" finished-at="2020-12-16T17:42:53 IST">
+  <suite name="Suite" duration-ms="33402" started-at="2020-12-18T19:04:24 IST" finished-at="2020-12-18T19:04:57 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="53708" started-at="2020-12-16T17:42:00 IST" finished-at="2020-12-16T17:42:53 IST">
-      <class name="com.atmecs.assess.yatra.testscripts.flightbooking">
-        <test-method status="PASS" signature="declaration()[pri:0, instance:com.atmecs.assess.yatra.testscripts.flightbooking@1ed4004b]" name="declaration" is-config="true" duration-ms="9840" started-at="2020-12-16T17:42:00 IST" finished-at="2020-12-16T17:42:10 IST">
+    <test name="Test" duration-ms="33402" started-at="2020-12-18T19:04:24 IST" finished-at="2020-12-18T19:04:57 IST">
+      <class name="com.atmecs.assess.yatra.testscripts.FlightBooking">
+        <test-method status="PASS" signature="declaration()[pri:0, instance:com.atmecs.assess.yatra.testscripts.FlightBooking@1ed4004b]" name="declaration" is-config="true" duration-ms="9820" started-at="2020-12-18T19:04:24 IST" finished-at="2020-12-18T19:04:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- declaration -->
-        <test-method status="PASS" signature="runBooking()[pri:0, instance:com.atmecs.assess.yatra.testscripts.flightbooking@1ed4004b]" name="runBooking" duration-ms="29610" started-at="2020-12-16T17:42:10 IST" finished-at="2020-12-16T17:42:39 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runBooking -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.atmecs.assess.yatra.testscripts.flightbooking@1ed4004b]" name="closeBrowser" is-config="true" duration-ms="1022" started-at="2020-12-16T17:42:39 IST" finished-at="2020-12-16T17:42:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.atmecs.assess.yatra.testscripts.flightbooking -->
-      <class name="com.atmecs.assess.yatra.testscripts.Monuments">
-        <test-method status="PASS" signature="declaration()[pri:0, instance:com.atmecs.assess.yatra.testscripts.Monuments@ff5b51f]" name="declaration" is-config="true" duration-ms="7755" started-at="2020-12-16T17:42:40 IST" finished-at="2020-12-16T17:42:48 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- declaration -->
-        <test-method status="FAIL" signature="runMonument()[pri:0, instance:com.atmecs.assess.yatra.testscripts.Monuments@ff5b51f]" name="runMonument" duration-ms="3780" started-at="2020-12-16T17:42:48 IST" finished-at="2020-12-16T17:42:52 IST">
-          <exception class="java.lang.IllegalArgumentException">
+        <test-method status="FAIL" signature="runBooking()[pri:0, instance:com.atmecs.assess.yatra.testscripts.FlightBooking@1ed4004b]" name="runBooking" duration-ms="3567" started-at="2020-12-18T19:04:34 IST" finished-at="2020-12-18T19:04:37 IST">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
+              <![CDATA[element click intercepted: Element <input data-role="none" readonly="readonly" type="text" autocomplete="false" name="flight_origin_date" placeholder=" " id="BE_flight_origin_date" class="custom-date-input BE_flight_origin_date"> is not clickable at point (165, 259). Other element would receive the click: <p class="ac_airportname">...</p>
+  (Session info: chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ATMECSINLT-407', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MOHAMM~1.RIZ\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55659}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 01c24c5063b677b7241c499ac65be19b]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)
-at com.atmecs.assess.yatra.helper.HelperClass.elementSendKeys(HelperClass.java:40)
-at com.atmecs.assess.yatra.pages.MonumentsClass.SearchMonuments(MonumentsClass.java:44)
-at com.atmecs.assess.yatra.testscripts.Monuments.runMonument(Monuments.java:15)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input data-role="none" readonly="readonly" type="text" autocomplete="false" name="flight_origin_date" placeholder=" " id="BE_flight_origin_date" class="custom-date-input BE_flight_origin_date"> is not clickable at point (165, 259). Other element would receive the click: <p class="ac_airportname">...</p>
+  (Session info: chrome=87.0.4280.88)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ATMECSINLT-407', ip: '192.168.0.109', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MOHAMM~1.RIZ\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55659}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 01c24c5063b677b7241c499ac65be19b
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at com.atmecs.assess.yatra.helper.HelperClass.elementClick(HelperClass.java:34)
+at com.atmecs.assess.yatra.pages.FlightBookingClass.bookTickets(FlightBookingClass.java:45)
+at com.atmecs.assess.yatra.testscripts.FlightBooking.runBooking(FlightBooking.java:13)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -70,11 +79,25 @@ at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runBooking -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.atmecs.assess.yatra.testscripts.FlightBooking@1ed4004b]" name="closeBrowser" is-config="true" duration-ms="1576" started-at="2020-12-18T19:04:37 IST" finished-at="2020-12-18T19:04:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.atmecs.assess.yatra.testscripts.FlightBooking -->
+      <class name="com.atmecs.assess.yatra.testscripts.Monuments">
+        <test-method status="PASS" signature="declaration()[pri:0, instance:com.atmecs.assess.yatra.testscripts.Monuments@ff5b51f]" name="declaration" is-config="true" duration-ms="8986" started-at="2020-12-18T19:04:39 IST" finished-at="2020-12-18T19:04:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- declaration -->
+        <test-method status="PASS" signature="runMonument()[pri:0, instance:com.atmecs.assess.yatra.testscripts.Monuments@ff5b51f]" name="runMonument" duration-ms="7659" started-at="2020-12-18T19:04:48 IST" finished-at="2020-12-18T19:04:56 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runMonument -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.atmecs.assess.yatra.testscripts.Monuments@ff5b51f]" name="closeBrowser" is-config="true" duration-ms="1639" started-at="2020-12-16T17:42:52 IST" finished-at="2020-12-16T17:42:53 IST">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.atmecs.assess.yatra.testscripts.Monuments@ff5b51f]" name="closeBrowser" is-config="true" duration-ms="1695" started-at="2020-12-18T19:04:56 IST" finished-at="2020-12-18T19:04:57 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
