@@ -6,6 +6,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -43,8 +44,8 @@ import com.atmecs.assess.yatra.reader.PropertyReader;
 		 * driver=new ChromeDriver(); } else
 		 * 
 		 * if((Data_path.getProperty("browserName").equalsIgnoreCase("firefox"))) {
-		 * System.setProperty("webdriver.gecko.driver", Constants.GECKO_PATH); driver
-		 * =new FirefoxDriver(); }
+		 * System.setProperty("webdriver.gecko.driver", Constants.GECKO_PATH);
+		 * driver=new FirefoxDriver(); }
 		 */
 		
 		

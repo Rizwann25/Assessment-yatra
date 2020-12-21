@@ -18,7 +18,7 @@ import com.atmecs.assess.yatra.setup.SetUp;
 			Location_path = PropertyReader.readProperty(Constants.LOCATORS_PATH);
 			Data_path = PropertyReader.readProperty(Constants.DATA_FILE);
 			Robot r = new Robot();
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 					
 			HelperClass.closeAdWindow(driver, Location_path.getProperty("yatra_iframe_ad"), 
 				               Location_path.getProperty("yatra_iframe_close_window"));
@@ -26,16 +26,24 @@ import com.atmecs.assess.yatra.setup.SetUp;
 		
 		  //Monuments Search 
 		  HelperClass.elementClick(driver, Location_path.getProperty("moreLink")); 
-		  HelperClass.elementClick(driver, Location_path.getProperty("monumentsXpath")); Thread.sleep(2000);
-		  HelperClass.elementClick(driver, Location_path.getProperty("selectDestination")); Thread.sleep(2000);
+		  HelperClass.elementClick(driver, Location_path.getProperty("monumentsXpath")); 
+		  
+		  
+		  HelperClass.elementClick(driver, Location_path.getProperty("selectDestination")); 
 		  
 		  //Searching Monuments
 		  HelperClass.elementSendKeys(driver, Location_path.getProperty("selectDestination"), Data_path.getProperty("monumentPlace")); 
 		  r.keyPress(KeyEvent.VK_TAB);
 		  r.keyRelease(KeyEvent.VK_TAB); 
-			
+		  
+		  driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
 		  //Search Button Operation
-		  HelperClass.elementClick(driver, Location_path.getProperty("searchButton"));
-					
+		  HelperClass.elementClick(driver, Location_path.getProperty("searchMonuments"));
+		  
+		  Thread.sleep(2000);
+		  
+		 HelperClass.elementClick(driver, Location_path.getProperty("allMonuments"));
+		 
+		  
 		}
 }

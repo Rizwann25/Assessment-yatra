@@ -15,11 +15,12 @@ import com.atmecs.assess.yatra.setup.SetUp;
 				run.SearchMonuments();
 				
 			}
-         
-		//Display Results
-		public static boolean checkIfDisplayed(WebDriver driver, String xpath) {
-			return driver.findElement(By.xpath(xpath)).isDisplayed();
-
-			}
+	
+	  //Display Results 
+	  public static boolean checkIfDisplayed(WebDriver driver,
+	  String xpath) { return driver.findElement(By.xpath(xpath)).isDisplayed();
+	  
+	  }
+	 
 		
 		}

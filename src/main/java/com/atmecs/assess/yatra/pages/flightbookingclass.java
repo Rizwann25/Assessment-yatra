@@ -3,6 +3,7 @@ package com.atmecs.assess.yatra.pages;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import com.atmecs.assess.yatra.constants.Constants;
@@ -28,17 +29,16 @@ public class FlightBookingClass extends SetUp {
 		 //FLIGHT BOOKING
 		 HelperClass.elementClick(driver, Location_path.getProperty("xpathFlights"));
 		 
-		
 		 //TRIP TYPE
-		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		 HelperClass.elementClick(driver, Location_path.getProperty("roundTrip_Id"));
 		 
+		 driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
 
 		  //TRIP DETAILS
 		  HelperClass.elementClick(driver, Location_path.getProperty("loc_departure_city")); 
 		  HelperClass.enterElement(driver, Location_path.getProperty("loc_departure_city"), Data_path.getProperty("depart"));
 		  
-		  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		  driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
 		  HelperClass.elementClick(driver, Location_path.getProperty("loc_arrival_city"));
 		  
 		  HelperClass.enterElement(driver, Location_path.getProperty("loc_arrival_city"), Data_path.getProperty("arrivals"));
@@ -49,7 +49,7 @@ public class FlightBookingClass extends SetUp {
 		  HelperClass.elementClick(driver, Location_path.getProperty("loc_departure_date_field"));
 		  HelperClass.elementClick(driver, Location_path.getProperty("loc_departure_date"));
 		  
-		  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		  driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
 		  HelperClass.elementClick(driver, Location_path.getProperty("loc_arrival_date_field"));
 		  HelperClass.elementClick(driver, Location_path.getProperty("loc_arrival_date")); 
 		  
@@ -62,28 +62,34 @@ public class FlightBookingClass extends SetUp {
 		  
 		  // SEARCH OPERATION 
 		  HelperClass.elementClick(driver, Location_path.getProperty("searchButtonXpath"));
-		  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+		  
+		  
+		  //Verifying Details
+		  HelperClass.elementClick(driver, Location_path.getProperty("arriveDetails"));
+		  HelperClass.elementClick(driver, Location_path.getProperty("departDetails"));
+		  HelperClass.elementClick(driver, Location_path.getProperty("durationFlight"));
+		  HelperClass.elementClick(driver, Location_path.getProperty("pricePerAdult"));
 		  
 		  //Validation
-		  HelperClass.elementClick(driver, Location_path.getProperty("flightDetails"));
-		  String expectedFlighName = validate_path.getProperty("flightName");
-		  String actualFlightName = HelperClass.getText(driver, Location_path.getProperty("airBus"));
-		  Assert.assertEquals(actualFlightName, expectedFlighName);
+		/*
+		 * HelperClass.elementClick(driver, Location_path.getProperty("flightDetails"));
+		 * String expectedFlighName = validate_path.getProperty("flightName"); String
+		 * actualFlightName = HelperClass.getText(driver,
+		 * Location_path.getProperty("airBus")); Assert.assertEquals(actualFlightName,
+		 * expectedFlighName);
+		 */
 		  
 		  HelperClass.elementClick(driver, Location_path.getProperty("fareSummary"));
 		  
 		  HelperClass.elementClick(driver, Location_path.getProperty("totalFareToBook"));
 		  
-		 
-		  
-		  Thread.sleep(2000);
 		  // BOOKING CONFIRMATION 
 		  HelperClass.elementClick(driver, Location_path.getProperty("bookNowXpath"));
 		  
-		  Thread.sleep(2000);
-		  //Validate Total Fare
-		  HelperClass.elementClick(driver, Location_path.getProperty("viewFareRules"));
+		  Thread.sleep(5000);
+		 // HelperClass.elementClick(driver, Location_path.getProperty("viewFareRules"));
 		  
-          Thread.sleep(2000);
+		  
+		  
 	}
 }

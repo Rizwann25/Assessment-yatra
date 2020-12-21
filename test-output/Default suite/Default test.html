@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Dec 18 19:55:24 IST 2020</td>
+<td>Started on:</td><td>Mon Dec 21 16:16:36 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>54 seconds (54212 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12636 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,16 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.atmecs.assess.yatra.testscripts.FlightBooking.runBooking()'><b>runBooking</b><br>Test class: com.atmecs.assess.yatra.testscripts.FlightBooking</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;DELBOM6E14820201225_6EAPI&quot;]/div/div[2]/div/div[1]/div&quot;}
+<td title='com.atmecs.assess.yatra.testscripts.Monuments.runMonument()'><b>runMonument</b><br>Test class: com.atmecs.assess.yatra.testscripts.Monuments</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input data-role=&quot;none&quot; type=&quot;submit&quot; value=&quot;Search Monuments&quot; id=&quot;BE_flight_flsearch_btn&quot; class=&quot;js_ripple search-btn&quot;&gt; is not clickable at point (384, 532). Other element would receive the click: &lt;div class=&quot;opaque-layer abs show&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=87.0.4280.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ATMECSINLT-407&apos;, ip: &apos;192.168.0.109&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MOHAMM~1.RIZ\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58158}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d999af4c7a0085c8ced69221d02d3d59
-*** Element info: {Using=xpath, value=//*[@id=&quot;DELBOM6E14820201225_6EAPI&quot;]/div/div[2]/div/div[1]/div}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MOHAMM~1.RIZ\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3f62c09c7a1f34a09cf5481a13e26fc4
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -95,13 +93,11 @@ Session ID: d999af4c7a0085c8ced69221d02d3d59
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.atmecs.assess.yatra.helper.HelperClass.elementClick(HelperClass.java:34)
-	at com.atmecs.assess.yatra.pages.FlightBookingClass.bookTickets(FlightBookingClass.java:68)
-	at com.atmecs.assess.yatra.testscripts.FlightBooking.runBooking(FlightBooking.java:13)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.atmecs.assess.yatra.helper.HelperClass.elementClick(HelperClass.java:36)
+	at com.atmecs.assess.yatra.pages.MonumentsClass.SearchMonuments(MonumentsClass.java:41)
+	at com.atmecs.assess.yatra.testscripts.Monuments.runMonument(Monuments.java:15)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,16 +126,14 @@ Session ID: d999af4c7a0085c8ced69221d02d3d59
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace369347944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace369347944'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;DELBOM6E14820201225_6EAPI&quot;]/div/div[2]/div/div[1]/div&quot;}
+</pre></div><a href='#' onClick='toggleBox("stack-trace297490204", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace297490204'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input data-role=&quot;none&quot; type=&quot;submit&quot; value=&quot;Search Monuments&quot; id=&quot;BE_flight_flsearch_btn&quot; class=&quot;js_ripple search-btn&quot;&gt; is not clickable at point (384, 532). Other element would receive the click: &lt;div class=&quot;opaque-layer abs show&quot;&gt;...&lt;/div&gt;
   (Session info: chrome=87.0.4280.88)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;ATMECSINLT-407&apos;, ip: &apos;192.168.0.109&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MOHAMM~1.RIZ\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:58158}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: d999af4c7a0085c8ced69221d02d3d59
-*** Element info: {Using=xpath, value=//*[@id=&quot;DELBOM6E14820201225_6EAPI&quot;]/div/div[2]/div/div[1]/div}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\MOHAMM~1.RIZ\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:61143}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 3f62c09c7a1f34a09cf5481a13e26fc4
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -150,13 +144,11 @@ Session ID: d999af4c7a0085c8ced69221d02d3d59
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at com.atmecs.assess.yatra.helper.HelperClass.elementClick(HelperClass.java:34)
-	at com.atmecs.assess.yatra.pages.FlightBookingClass.bookTickets(FlightBookingClass.java:68)
-	at com.atmecs.assess.yatra.testscripts.FlightBooking.runBooking(FlightBooking.java:13)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.atmecs.assess.yatra.helper.HelperClass.elementClick(HelperClass.java:36)
+	at com.atmecs.assess.yatra.pages.MonumentsClass.SearchMonuments(MonumentsClass.java:41)
+	at com.atmecs.assess.yatra.testscripts.Monuments.runMonument(Monuments.java:15)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -186,8 +178,8 @@ Session ID: d999af4c7a0085c8ced69221d02d3d59
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>43</td>
-<td>com.atmecs.assess.yatra.testscripts.FlightBooking@9660f4e</td></tr>
+<td>3</td>
+<td>com.atmecs.assess.yatra.testscripts.Monuments@6c49835d</td></tr>
 </table><p>
 </body>
 </html>

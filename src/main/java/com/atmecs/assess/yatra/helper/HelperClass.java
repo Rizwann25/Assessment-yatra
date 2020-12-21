@@ -28,6 +28,8 @@ import org.openqa.selenium.support.ui.Select;
 		{
 			driver.findElement(By.xpath(xpath));	
 		}
+		
+		
 		//this method is for click on page element
 		public static void elementClick(WebDriver driver,String xpath)
 		{
